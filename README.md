@@ -30,6 +30,14 @@ docker-compose restart web
 # Check container status
 docker-compose ps
 ```
+
+## DB management
+To create a superuser:
+```bash
+docker-compose exec web python manage.py createsuperuser
+``` 
+
+
 ## License
 
 [MIT](https://choosealicense.com/licenses/mit/)

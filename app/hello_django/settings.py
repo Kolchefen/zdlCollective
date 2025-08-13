@@ -48,9 +48,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django_bootstrap5',
-    'upload',
     'main',
-    'users',
 ]
 
 MIDDLEWARE = [
@@ -138,7 +136,8 @@ USE_TZ = True
 STATIC_URL = "/staticfiles/"
 STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 
-MEDIA_URL = "/mediafiles/"
-MEDIA_ROOT = os.path.join(BASE_DIR, "mediafiles")
+# Media files configuration removed since upload functionality was removed
+# MEDIA_URL = "/mediafiles/"
+# MEDIA_ROOT = os.path.join(BASE_DIR, "mediafiles")
 
-AUTH_USER_MODEL = 'users.SystemUser'
+# AUTH_USER_MODEL = 'users.SystemUser'  # Removed - no longer using custom user model
