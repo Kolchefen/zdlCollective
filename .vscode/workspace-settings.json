@@ -1,0 +1,11 @@
+{
+    "html.suggest.html5": true,
+    "html.autoClosingTags": true,
+    "emmet.triggerExpansionOnTab": true,
+    "editor.quickSuggestions": {
+        "other": true,
+        "comments": true,
+        "strings": true
+    },
+    "editor.tabCompletion": "on"
+}

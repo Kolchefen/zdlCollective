@@ -1,0 +1,32 @@
+{
+    "files.associations": {
+        "*.html": "django-html"
+    },
+    "auto-close-tag.activationOnLanguage": [
+        "django-html",
+        "html"
+    ],
+    "auto-close-tag.enableAutoCloseTag": true,
+    "auto-close-tag.enableAutoCloseSelfClosingTag": true,
+    "[django-html]": {
+        "editor.quickSuggestions": {
+            "other": true,
+            "comments": true,
+            "strings": true
+        },
+        "editor.suggest.insertMode": "replace"
+    },
+    "html.suggest.html5": true,
+    "html.autoClosingTags": true,
+    "html.completion.attributeDefaultValue": "doublequotes",
+    "css.validate": true,
+    "css.completion.completePropertyWithSemicolon": true,
+    "css.completion.triggerPropertyValueCompletion": true,
+    "html-css-class-completion.enableEmmetSupport": true,
+    "html-css-class-completion.includeGlobPattern": "**/*.{css,html}",
+    "emmet.includeLanguages": {
+        "django-html": "html"
+    },
+    "emmet.triggerExpansionOnTab": true,
+    "bootstrap5.showOnStartup": false
+}
