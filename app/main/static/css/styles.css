@@ -1,0 +1,70 @@
+/* Remove the global body effect */
+body.override {
+    background: none; /* Remove the radial gradient from the body */
+    overflow: auto; /* Restore normal scrolling */
+}
+
+/* Nav bar with window-pane effect */
+.nav-pane {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2); /* Subtle bottom border */
+    overflow: hidden;
+    background: radial-gradient(ellipse at bottom, rgba(255, 255, 255, 0.2) 0%, rgba(0, 0, 0, 1) 100%);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.3); /* Enhance the glow effect */
+}
+
+/* Sliding light effect on the bottom border */
+.nav-pane::before {
+    content: '';
+    position: absolute;
+    bottom: 0; /* Position the effect at the bottom */
+    left: -100%; /* Start the animation off-screen */
+    width: 100%; /* Ensure the gradient spans across the navbar */
+    height: 2px; /* Match the border height */
+    background: linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0) 20%, /* Start with full transparency */
+        rgba(255, 255, 255, 0.8) 50%, /* Peak opacity at the center */
+        rgba(255, 255, 255, 0) 100% /* End with full transparency */
+    );
+    animation: slide-light 10s infinite ease-in-out; /* Smooth oscillating animation */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3); /* Subtle glow effect */
+}
+
+/* Glow effect on hover for nav links */
+.nav-pane a {
+    position: relative;
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s ease;
+}
+
+.nav-pane a:hover {
+    color: #ffcc00;
+    text-shadow: 0 0 10px rgba(255, 204, 0, 0.8), 0 0 20px rgba(255, 204, 0, 0.6);
+}
+
+/* Keyframes for smooth oscillation */
+@keyframes slide-light {
+    0% {
+        left: -80%; /* Start off-screen on the left */
+    }
+    50% {
+        left: 95%; /* Move fully to the right */
+    }
+    100% {
+        left: -80%; /* Return to the starting position */
+    }
+}
+
+/* Define the custom font */
+@font-face {
+    font-family: 'SourceCodePro';
+    src: url('{% static "SourceCodePro-VariableFont_wght.ttf" %}') format('truetype'),
+         url('{% static "fonts/SourceCodePro-Italic-VariableFont_wght.ttf" %}') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
